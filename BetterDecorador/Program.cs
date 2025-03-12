@@ -11,7 +11,7 @@ namespace BetterDecorador
         /// <summary>
         /// Calls the Decor method with the arguments passed in the command line
         /// </summary>
-        /// <param name="args">Arguments from the command line</param>
+        /// <param name="args">Arguments received from the command line</param>
         /// <returns></returns>
         private static void Main(string[] args)
         {
