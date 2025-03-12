@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BetterDecorador
 {
@@ -12,7 +13,10 @@ namespace BetterDecorador
         }  
         private static string Decor(string s, char dec, int num)
         {
-            return $"{num*dec} {s} {num*dec}";
+            
+            string a = new string(dec, num);
+
+            return $"{a} {s} {a}";
         } 
     }
 }
