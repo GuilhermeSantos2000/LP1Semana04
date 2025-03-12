@@ -15,9 +15,16 @@ namespace BetterDecorador
         /// <returns></returns>
         private static void Main(string[] args)
         {
-            char symbol = char.Parse(args[1]);
-            int times = int.Parse(args[2]);
-            Console.WriteLine(Decor(args[0], symbol, times));
+            if (args.Length == 0)
+            {
+                Console.WriteLine(Decor());
+            }
+            else
+            {
+                char symbol = char.Parse(args[1]);
+                int times = int.Parse(args[2]);
+                Console.WriteLine(Decor(args[0], symbol, times));
+            }
         }  
         /// <summary>
         /// Utilizes arguments to create a string with a character dec times num on each side of a string s
@@ -33,5 +40,10 @@ namespace BetterDecorador
 
             return $"{a} {s} {a}";
         } 
+
+        private static string Decor()
+        {
+           return Decor("User did not specify args!", '=', 3);
+        }
     }
 }
